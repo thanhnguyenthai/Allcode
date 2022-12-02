@@ -1,0 +1,17 @@
+p{
+    border-style: dotted; /* dotted, double, groove, hidden, initial, inset, none, outset, ridge, solid, unset */
+    border-width: 5px;
+    border-color: greenyellow;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+h1{
+    border-top-style: solid; 
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 10px;
+    border-left-color: silver;
+}
+

@@ -1,0 +1,23 @@
+/*
+img{
+    float: right;
+
+}
+
+*/
+
+.box{
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    font-size:40px;
+    text-align: center;
+    background: greenyellow;
+
+    float: left;
+
+}
+
+p{
+    clear: right;
+}

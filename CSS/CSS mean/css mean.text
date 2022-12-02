@@ -1,0 +1,50 @@
+CSS là lớp trang điểm cho HTML
+Khối css:
+
+p{
+    color: red;
+    text-align: center;
+}
+
+css selector:
+1. Element:
+p {
+    color: red;
+    text-align: center;
+}
+
+2. id:
+#p {
+    color: red;
+    text-align: center;
+}
+
+3. class:
+.p {
+    color: red;
+    text-align: center;
+}
+
+mix:
+.p p *p{
+     color: red;
+    text-align: center;
+}
+
+chọn toàn bộ element:
+*{
+    color: red;
+    text-align: center;
+}
+
+phân cách nhiều h1 h2 h3:
+
+h1, h2, h3, h1, h2, h3, h1, p {
+    color: red;
+    text-align: center;
+}
+
+
+
+
+text-align: Vị trí chữ trong trang

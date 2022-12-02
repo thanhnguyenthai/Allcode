@@ -1,0 +1,33 @@
+body{
+    border: 2px solid;
+    margin: 0px
+}
+
+
+#box1{
+    border: 5px solid;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background: yellowgreen;
+
+    padding: 50px;
+
+    /*trick: */
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#box2 {
+    border: 5px solid;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background: blueviolet;
+
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}

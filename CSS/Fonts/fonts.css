@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+
+}
+
+h1{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+h2{
+    color: fuchsia;
+    font-family: 'Pacifico', cursive;
+}
+
+p{
+    color: greenyellow;
+    font-family: 'Nunito', sans-serif; /* font family: https: //www.tutorialbrain.com/css_tutorial/css_font_family_list/ 
+                                            https: //fonts.google.com/*/
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: cyan dotted underline;
+    font-size: 1.5em;
+}

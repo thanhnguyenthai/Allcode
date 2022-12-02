@@ -1,0 +1,51 @@
+#box1{
+    border: 1px solid ;
+    height: 300px;
+    width: 300px;
+    background-color: skyblue;
+
+    position: relative;
+    left: 500px;
+    top: 50px;
+
+
+}
+
+#box2 {
+    border: 1px solid #ccc;
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+
+    position: absolute /*Hiện trước mọi thứ*/; 
+    top: 100px;
+    left: 100px;
+
+
+}
+
+#box3 {
+    border: 1px solid;
+    height: 300px;
+    width: 300px;
+    background-color: skyblue;
+
+    position: sticky ;
+    right:0px;
+    top: 0px;
+}
+
+#box4 {
+    border: 1px solid #ccc;
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+
+    position: fixed
+        /*Hiện trước mọi thứ*/
+    ;
+    top: 100px;
+    left: 100px;
+
+
+}
