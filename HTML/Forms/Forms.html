@@ -1,0 +1,91 @@
+https://www.youtube.com/watch?v=HD13eq_Pmp8&t=3066s
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   <form action="action_page.php" method="POST">
+    <div>
+        <label for="fname">First name: </label>
+        <input type="text" id="fname" name="fname" placeholder="First name" required>
+    </div>
+    <br>
+    <div>
+        <label for="lname"> Last name: </label>
+        <input type="text" id="lname" name="lname" placeholder="Last name" required>
+    </div>    
+    <br>
+    <div>
+        <label for="password"> Password: </label>
+        <input type="password" id="password" name="password" placeholder="Password" maxlength="12"required>
+    </div>
+    <br>
+    <div>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+    </div>
+
+    <br>
+    <div>
+        <label for="phone"> Phone: </label>
+        <input type="tel" id="phone" name="phone" placeholder="phone num" required>
+    </div>
+
+    <br>
+    <div>
+        <label for="bdate"> Birth date: </label>
+        <input type="date" id="bdate" name="bdate" required>
+    </div>
+
+    <br>
+    <div>
+        <label for="quantity"> Quantity: </label>
+        <input type="number" id="quantity" name="quantity" min="0" max="100" required>
+    </div>
+
+
+    <br>
+    <div>
+        <lable for="title">Title:</lable>
+        <lable for="Mr.">Mr.</lable>
+        <input type="radio" id="Mr." name="title" value="Mr.">
+
+        <lable for="Mrs.">Mrs.</lable>
+        <input type="radio" id="Mrs." name="title" value="Mrs.">
+
+        <lable for="PhD.">PhD.</lable>
+        <input type="radio" id="PhD."name="title" value="PhD.">
+    </div>
+    <br>
+    <div>
+        <lable for="payment">Payment:</lable>
+        <select id="payment" name="payment">
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="gifcard">GIF card</option>
+        </select>
+    </div>
+
+    <br>
+
+    <div>
+        <lable for="subcribe">Subcribe: </lable>
+        <input type="checkbox" id="subcribe" name="subcribe">
+    </div>
+    <div>
+        <input type="reset">
+    </div>
+    <br>
+    <div>
+        <input type="submit">
+    </div>
+           </form>
+</body>
+
+</html>
