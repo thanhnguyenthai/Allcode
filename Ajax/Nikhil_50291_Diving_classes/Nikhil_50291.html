@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link src="sport.php">
+        <link src="sport.js">
+        <link src="submit.php">
+        <link src="admin.php">
+        <link src="form_data.json">
+    </head>
+    <body onload="process()">
+       
+        <h1>Diving Classes</h1>
+        <h2>Nikhil Choudhary</h2>
+        <h2>I like this diving sport </h2>
+        
+        <form action="submit.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+        
+            <label for="student ID">Student ID:</label>
+            <input type="text" id="studentid" name="studentid"><br><br>
+
+            <h2>Which sports do you like?</h2>
+            <span>We have: "scuba diving", "snorkelling", "free diving"</span>
+            <br>
+            <label for="input">Write a sport on the list with uncapslock:</label>
+            <input type="text" id="input" name="input"><br><br>
+            <div id="underInput"></div>
+           <input type="submit" value="Submit">
+
+        </form>
+        
+        <script>
+          
+            
+               
+                var xmlHttp = createXmlHttpRequestObject()
+
+                function createXmlHttpRequestObject() {
+                    var xmlHttp;
+
+                    if (window.ActiveXObject) {
+                        try {
+                            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            xmlHttp = false;
+                        }
+                    } else {
+                        try {
+                            xmlHttp = new XMLHttpRequest();
+                        } catch (e) {
+                            xmlHttp = false;
+                        }
+                    }
+
+                    if (!xmlHttp)
+                        alert("cant create that object hoss!");
+                    else
+                        return xmlHttp;
+                }
+
+                function process() {
+                    // alert("1st checkpoint f(process) - readyState: " + xmlHttp.readyState);//
+                    if (xmlHttp.readyState == 0 || xmlHttp.readyState == 4) {
+                        //  alert("2nd checkpoint f(process) - readyState: " + xmlHttp.readyState);//
+                        sport = encodeURIComponent(document.getElementById("input").value);
+                        xmlHttp.open("GET", "sport.php?sport=" + sport, true);
+                        xmlHttp.onreadystatechange = handleServerResponse;
+                        xmlHttp.send(null);
+                    } else {
+                        setTimeout('process()', 1000);
+                    }
+                }
+
+                function handleServerResponse() {
+                    // alert("1st checkpoint f(handleServerResponse) - readyState: " + xmlHttp.readyState);//
+                    if (xmlHttp.readyState == 4) {
+                        //   alert("2nd checkpoint f(handleServerResponse) - readyState: " + xmlHttp.readyState);//
+                        if (xmlHttp.status == 200) {
+                            xmlReponse = xmlHttp.responseXML;
+                            xmlDocumentElement = xmlReponse.documentElement;
+                            message = xmlDocumentElement.firstChild.data;
+                            document.getElementById("underInput").innerHTML = message;
+                            setTimeout('process()', 1000);
+                        } else {
+                            alert('Something went wrong!');
+                        }
+                    }
+                }
+
+
+
+        </script>
+    </body>
+</html>
